@@ -1,0 +1,10 @@
+fr\frenchopium\hub\listeners\MenuPrincipalGUI.class
+fr\frenchopium\hub\commands\Spec.class
+fr\frenchopium\hub\Hub.class
+fr\frenchopium\hub\listeners\LobbyProtector.class
+fr\frenchopium\hub\commands\HubCmds.class
+fr\frenchopium\hub\commands\FlyCmd.class
+fr\frenchopium\hub\listeners\HubListeners.class
+fr\frenchopium\hub\listeners\JoinEvent.class
+fr\frenchopium\hub\commands\Joueurs.class
+fr\frenchopium\hub\events\EventManager.class

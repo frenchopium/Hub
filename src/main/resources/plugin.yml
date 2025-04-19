@@ -1,0 +1,29 @@
+name: hub
+version: '${project.version}'
+main: fr.frenchopium.hub.Hub
+api-version: 1.12
+prefix: hub
+authors: [ frenchopium ]
+description: Plugin pour le Hub de LB'Network
+website: https://play.lb-c.fr
+commands:
+  fly:
+    description: Permet aux personnes avec un certain grade de voler
+    permission: admin.tuto
+    permission-message: &cTu n'as pas accès a cette commande! Utilise le /boutique pour voir tes avantages en jeu.
+  spec:
+    description: Permet aux administrateurs de se mettre en mode spectateur
+    permission: admin.spec
+    permission-message: &cTu n'as pas accès a cette commande
+  boutique:
+    description: Permet de voir la boutique en jeu (Ranks & Boosters)
+    permission: admin.boutique
+    permission-message: &cTu n'as pas accès a cette commande
+  hub:
+    description: Permet de voir toutes les commandes du plugin Hub
+    permission: admin.hubcmd
+    permission-message: &cTu n'as pas accès a cette commande
+  joueurs:
+    description: Permet de voir tous les joueurs connectés sur le Proxy
+    permission: admin.bungee
+    permission-message: &cTu n'as pas accès a cette commande
