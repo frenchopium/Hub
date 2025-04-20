@@ -33,7 +33,7 @@ public final class Hub extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new JoinEvent(), this);
         new EventManager(this).registerEvent();
         getServer().getPluginManager().registerEvents(new MenuPrincipalGUI(this), this);
-        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "Bungeecord");
+        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
     }
 
