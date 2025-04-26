@@ -54,8 +54,8 @@ public class JoinEvent implements Listener {
         obj.setDisplayName("§6LB'Network");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
         obj.getScore("").setScore(13);
-        obj.getScore(ChatColor.GRAY + "•Connectés: " + ChatColor.WHITE + "?").setScore(12);
-        obj.getScore(ChatColor.GRAY + "Lobby: " + ChatColor.WHITE + "?").setScore(11);
+        obj.getScore(ChatColor.GRAY + "• Connectés: " + ChatColor.WHITE + "?").setScore(12);
+        obj.getScore(ChatColor.GRAY + "• Lobby: " + ChatColor.WHITE + "?").setScore(11);
         obj.getScore(" ").setScore(10); // Espaces différents pour éviter les doublons
         obj.getScore(ChatColor.WHITE + p.getName()).setScore(9);
         obj.getScore(ChatColor.GRAY + "• Grade: " + ChatColor.WHITE + "?").setScore(8);

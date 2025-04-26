@@ -11,14 +11,12 @@ public class EventManager {
     public Plugin plugin;
     public PluginManager pm;
 
-    // Add this field to store the Hub reference
     private Hub hubInstance;
 
     public EventManager(Plugin plugin) {
         this.plugin = plugin;
         pm = Bukkit.getPluginManager();
 
-        // Store Hub reference if plugin is a Hub
         if (plugin instanceof Hub) {
             this.hubInstance = (Hub) plugin;
         }
@@ -26,7 +24,6 @@ public class EventManager {
 
     public void registerEvent() {
         pm.registerEvents(new LobbyProtector(), plugin);
-        // Now pass the Hub instance
         pm.registerEvents(new MenuPrincipalGUI(hubInstance), plugin);
     }
 }
