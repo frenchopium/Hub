@@ -43,8 +43,9 @@ public class MenuPrincipalGUI implements Listener {
             if(itm.getType() == Material.COMPASS){
                 Inventory inv = Bukkit.createInventory(null, 54, "§eMenu Principal");
 
-                inv.setItem(19, getItem("§cBedWars §fSaison 1", Material.BED, new String[] {"§8Mini-jeu - 1.8.x - 1.20.x", "  ", "§7Détruisez le lit des équipes ennemies tout", "§7en protégeant le vôtre pour remporter la partie! ",  "    ", "§c ✖ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
-                inv.setItem(20, getItem("§6LoupGarou §fSaison 1", Material.GOLDEN_APPLE, new String[] {"§8Mini-jeu - 1.8.x - 1.21.x", "  ", "§7Le mode Loup-Garou est un mode inspiré", "§7du jeu de société Les Loups-Garous de Thiercelieux",  "    ", "§a ✔ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
+                inv.setItem(0, getItem("", Material.STAINED_GLASS_PANE,(byte) 4, new String[] {}));
+                inv.setItem(19, getItem("§cBedWars §fSaison 1", Material.BED, (byte) 4, new String[] {"§8Mini-jeu - 1.8.x - 1.20.x", "  ", "§7Détruisez le lit des équipes ennemies tout", "§7en protégeant le vôtre pour remporter la partie! ",  "    ", "§c ✖ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
+                inv.setItem(20, getItem("§6LoupGarou §fSaison 1", Material.GOLDEN_APPLE, (byte) 4, new String[] {"§8Mini-jeu - 1.8.x - 1.21.x", "  ", "§7Le mode Loup-Garou est un mode inspiré", "§7du jeu de société Les Loups-Garous de Thiercelieux",  "    ", "§a ✔ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
                 e.getPlayer().openInventory(inv);
             }
         }
