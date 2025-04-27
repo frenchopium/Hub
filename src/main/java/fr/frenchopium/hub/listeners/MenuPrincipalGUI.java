@@ -38,7 +38,7 @@ public class MenuPrincipalGUI implements Listener {
 
     @EventHandler
     public void onInteract(PlayerInteractEvent e){
-        if(e.getAction() == Action.RIGHT_CLICK_AIR){
+        if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_AIR){
             ItemStack itm = e.getItem();
             if(itm.getType() == Material.COMPASS){
                 Inventory inv = Bukkit.createInventory(null, 54, "§eMenu Principal");
