@@ -44,6 +44,9 @@ public class MenuPrincipalGUI implements Listener {
                 Inventory inv = Bukkit.createInventory(null, 54, "§eMenu Principal");
 
                 ItemStack yellowGlass = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 4);
+                ItemMeta meta = yellowGlass.getItemMeta();
+                meta.setDisplayName("");
+                yellowGlass.setItemMeta(meta);
                 inv.setItem(0, yellowGlass);
                 inv.setItem(1, yellowGlass);
                 inv.setItem(7, yellowGlass);
