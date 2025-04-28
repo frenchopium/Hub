@@ -157,10 +157,6 @@ public class MenuPrincipalGUI implements Listener {
                     String telephoneTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIwNjVkMTUyYTgwYjE1MDZiZWQ5NjAxNDhhOWIzYmM3MGExMzVjZTU0NGNmOGY5OGNhYmNiMzUxZTNhZWFiOSJ9fX0=";
                     String pcTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2U5OGI1NTY3MWQ0ZWYyZjY0MjU5ZWZlNmFhNjcyOWZlNjVjNzdkYTE5NmMyZDQ1Njg2NjM3NmVjY2NhNjYwYiJ9fX0=";
 
-                    Compatibilite.setItem(0, yellowGlass);
-                    Compatibilite.setItem(1, yellowGlass);
-                    Compatibilite.setItem(7, yellowGlass);
-                    Compatibilite.setItem(8, yellowGlass);
                     Compatibilite.setItem(11, getCustomHead("§7§lPC", pcTexture, new String[] {}));
                     Compatibilite.setItem(12, getCustomHead("§9§lPS5", ps5Texture, new String[] {}));
                     Compatibilite.setItem(13, getCustomHead("§9§lPS4", ps4Texture, new String[] {}));
@@ -168,10 +164,6 @@ public class MenuPrincipalGUI implements Listener {
                     Compatibilite.setItem(15, getCustomHead("§2§lXbox One", xboxOneTexture, new String[] {}));
                     Compatibilite.setItem(16, getCustomHead("§c§lNintendo Switch", switchTexture, new String[] {}));
                     Compatibilite.setItem(17, getCustomHead("§7§lTéléphone", telephoneTexture, new String[] {}));
-                    Compatibilite.setItem(18, yellowGlass);
-                    Compatibilite.setItem(19, yellowGlass);
-                    Compatibilite.setItem(27, yellowGlass);
-                    Compatibilite.setItem(28, yellowGlass);
                     p.openInventory(Compatibilite);
                 }
             }
