@@ -83,7 +83,7 @@ public class MenuPrincipalGUI implements Listener {
         if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_AIR){
             ItemStack itm = e.getItem();
             if(itm != null && itm.getType() == Material.COMPASS){
-                Inventory inv = Bukkit.createInventory(null, 54, "§eMenu Principal");
+                Inventory PagePrincipal = Bukkit.createInventory(null, 54, "§eMenu Principal");
 
                 // Tetes custom
                 String crownTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmVhYWQxNDU3YTMyMTYzMGQxMzA3NDZhODYwZTQwMjdiNDA4MGY0YTUzOTIzZGI4ZTU4MzdiZTM2OGVkNmYzMCJ9fX0=";
@@ -105,21 +105,21 @@ public class MenuPrincipalGUI implements Listener {
                 yellowGlass.setItemMeta(meta);
 
                 // Mis en page des items
-                inv.setItem(0, yellowGlass);
-                inv.setItem(1, yellowGlass);
-                inv.setItem(7, yellowGlass);
-                inv.setItem(8, yellowGlass);
-                inv.setItem(2, getCustomHead("§e§lBoutique VIP", crownTexture, new String[]{"§7Accédez à la boutique pour", "§7acheter des avantages exclusifs!", "", "§6» §6Cliquez §6pour ouvrir"}));
-                inv.setItem(3, getCustomHead("§9§lCompatibilité", compatibiliteTexture, new String[] {"§7Accédez a la page de compatibilité pour voir", "§7sur quel console/platformes le serveur est jouable.", "", "§6» §6Cliquez §6pour ouvrir"}));
-                inv.setItem(4, getCustomHead("§a§lStatus", statusTexture, new String[] {"§7Accédez a la page de status pour savoir", "§7quels serveurs sont actuellement en ligne.", "", "§6» §6Cliquez §6pour ouvrir"}));
-                inv.setItem(19, getItem("§cBedWars §fSaison 1", Material.BED, new String[] {"§8Mini-jeu - 1.8.x - 1.20.x", "  ", "§7Détruisez le lit des équipes ennemies tout", "§7en protégeant le vôtre pour remporter la partie! ",  "    ", "§c ✖ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
-                inv.setItem(20, getCustomHead("§6LoupGarou §fSaison 1", werewolfTexture, new String[] {"§8Mini-jeu - 1.8.x - 1.21.x", "  ", "§7Le mode Loup-Garou est un mode inspiré", "§7du jeu de société Les Loups-Garous de Thiercelieux",  "    ", "§a ✔ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
-                inv.setItem(21, getCustomHead("§aSkyBlock §bSAISONS UPDATE", islandTexture, new String[] {"§8Mini-jeu - +1.21.4", "  ", "§7Commencez votre aventure sur une petite ile", "§7tout seul ou étant accompagnée.", "§7Améliorez vos ressources et agrandissez votre ile avec cela!",  "    ", "§a ✔ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
-                inv.setItem(45, yellowGlass);
-                inv.setItem(46, yellowGlass);
-                inv.setItem(52, yellowGlass);
-                inv.setItem(53, yellowGlass);
-                e.getPlayer().openInventory(inv);
+                PagePrincipal.setItem(0, yellowGlass);
+                PagePrincipal.setItem(1, yellowGlass);
+                PagePrincipal.setItem(7, yellowGlass);
+                PagePrincipal.setItem(8, yellowGlass);
+                PagePrincipal.setItem(2, getCustomHead("§e§lBoutique VIP", crownTexture, new String[]{"§7Accédez à la boutique pour", "§7acheter des avantages exclusifs!", "", "§6» §6Cliquez §6pour ouvrir"}));
+                PagePrincipal.setItem(3, getCustomHead("§9§lCompatibilité", compatibiliteTexture, new String[] {"§7Accédez a la page de compatibilité pour voir", "§7sur quel console/platformes le serveur est jouable.", "", "§6» §6Cliquez §6pour ouvrir"}));
+                PagePrincipal.setItem(4, getCustomHead("§a§lStatus", statusTexture, new String[] {"§7Accédez a la page de status pour savoir", "§7quels serveurs sont actuellement en ligne.", "", "§6» §6Cliquez §6pour ouvrir"}));
+                PagePrincipal.setItem(19, getItem("§cBedWars §fSaison 1", Material.BED, new String[] {"§8Mini-jeu - 1.8.x - 1.20.x", "  ", "§7Détruisez le lit des équipes ennemies tout", "§7en protégeant le vôtre pour remporter la partie! ",  "    ", "§c ✖ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
+                PagePrincipal.setItem(20, getCustomHead("§6LoupGarou §fSaison 1", werewolfTexture, new String[] {"§8Mini-jeu - 1.8.x - 1.21.x", "  ", "§7Le mode Loup-Garou est un mode inspiré", "§7du jeu de société Les Loups-Garous de Thiercelieux",  "    ", "§a ✔ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
+                PagePrincipal.setItem(21, getCustomHead("§aSkyBlock §bSAISONS UPDATE", islandTexture, new String[] {"§8Mini-jeu - +1.21.4", "  ", "§7Commencez votre aventure sur une petite ile", "§7tout seul ou étant accompagnée.", "§7Améliorez vos ressources et agrandissez votre ile avec cela!",  "    ", "§a ✔ Bedrock", "§6» §6Cliquez §6pour rejoindre"}));
+                PagePrincipal.setItem(45, yellowGlass);
+                PagePrincipal.setItem(46, yellowGlass);
+                PagePrincipal.setItem(52, yellowGlass);
+                PagePrincipal.setItem(53, yellowGlass);
+                e.getPlayer().openInventory(PagePrincipal);
             }
         }
     }
@@ -144,9 +144,9 @@ public class MenuPrincipalGUI implements Listener {
             if(current.getType() == Material.SKULL_ITEM) {
                 String itemName = current.getItemMeta().getDisplayName();
 
-                if(itemName.equals("§6§lServeur PVP")) {
+                if(itemName.equals("§9§lCompatibilité")) {
                     p.closeInventory();
-                    this.main.sendToServer(p, "pvp");
+                    Inventory Compatibilite = Bukkit.createInventory(null, 54, "§es");
                 }
             }
         }
