@@ -157,13 +157,13 @@ public class MenuPrincipalGUI implements Listener {
                     String telephoneTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIwNjVkMTUyYTgwYjE1MDZiZWQ5NjAxNDhhOWIzYmM3MGExMzVjZTU0NGNmOGY5OGNhYmNiMzUxZTNhZWFiOSJ9fX0=";
                     String pcTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2U5OGI1NTY3MWQ0ZWYyZjY0MjU5ZWZlNmFhNjcyOWZlNjVjNzdkYTE5NmMyZDQ1Njg2NjM3NmVjY2NhNjYwYiJ9fX0=";
 
-                    Compatibilite.setItem(11, getCustomHead("§7§lPC", pcTexture, new String[] {}));
-                    Compatibilite.setItem(12, getCustomHead("§9§lPS5", ps5Texture, new String[] {}));
-                    Compatibilite.setItem(13, getCustomHead("§9§lPS4", ps4Texture, new String[] {}));
-                    Compatibilite.setItem(14, getCustomHead("§2§lXbox Series X & S", xboxTexture, new String[] {}));
-                    Compatibilite.setItem(15, getCustomHead("§2§lXbox One", xboxOneTexture, new String[] {}));
-                    Compatibilite.setItem(16, getCustomHead("§c§lNintendo Switch", switchTexture, new String[] {}));
-                    Compatibilite.setItem(17, getCustomHead("§7§lTéléphone", telephoneTexture, new String[] {}));
+                    Compatibilite.setItem(10, getCustomHead("§7§lPC", pcTexture, new String[] {"§f» §7Un accès a tous les mini-jeux du serveur", "§f» §7Queue prioritaire", "§f» §7Serveur accesible dans toutes les versions du jeu"}));
+                    Compatibilite.setItem(11, getCustomHead("§9§lPS5", ps5Texture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
+                    Compatibilite.setItem(12, getCustomHead("§9§lPS4", ps4Texture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
+                    Compatibilite.setItem(13, getCustomHead("§2§lXbox Series X & S", xboxTexture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
+                    Compatibilite.setItem(14, getCustomHead("§2§lXbox One", xboxOneTexture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
+                    Compatibilite.setItem(15, getCustomHead("§c§lNintendo Switch", switchTexture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
+                    Compatibilite.setItem(16, getCustomHead("§7§lTéléphone", telephoneTexture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
                     p.openInventory(Compatibilite);
                 }
             }
