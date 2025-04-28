@@ -10,7 +10,6 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -83,7 +82,7 @@ public class MenuPrincipalGUI implements Listener {
         if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_AIR){
             ItemStack itm = e.getItem();
             if(itm != null && itm.getType() == Material.COMPASS){
-                Inventory PagePrincipal = Bukkit.createInventory(null, 54, "§eMenu Principal");
+                Inventory PagePrincipal = Bukkit.createInventory(null, 54, "§7Menu Principal");
 
                 // Tetes custom
                 String crownTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmVhYWQxNDU3YTMyMTYzMGQxMzA3NDZhODYwZTQwMjdiNDA4MGY0YTUzOTIzZGI4ZTU4MzdiZTM2OGVkNmYzMCJ9fX0=";
@@ -91,12 +90,6 @@ public class MenuPrincipalGUI implements Listener {
                 String werewolfTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzk4MWI5NWVhN2MxYjkzNWQ2Yzg3NDYyMGVlZGNlMWYzNGE4NzIzMzIyNDI1OWU5M2NiOTU3ZWNmMTAzZmJlZSJ9fX0=";
                 String statusTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTc5YTk0MmRjZTFlMjM2ZmUxNjM2ODRjYjY5OGY5ZGJmYjgxYmFjOTU4ZDA5OWMyNzQxZDQyYTIyNzRjN2U5In19fQ==";
                 String compatibiliteTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0NjY1MzY4NDFmYzQwOWNhOWM0MDc1NTRkM2JiMzViMTJhMzdlN2JlN2ZjYmNmMzEyMDlkN2Q4MjcxNTQ0ZSJ9fX0=";
-                String ps5Texture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE0ZGI3ZGRhZTZmMTMwZjc3NzQzZjlkNzYxYTk0NzYyMTEwNTZkMWIwZTQ3MjdjMDZhMGJlYWU1MjAxNGEyZSJ9fX0=";
-                String ps4Texture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzRkZWMwM2I5N2VhM2Q4MDNmMzI4YjkwN2UxMjcxZmExMDc3ZWExMTZmODU2ZjNjMzM4NTlkNGM3OTdiODJkYSJ9fX0=";
-                String xboxTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzk0MjAzMzk2YWIzYzAxMmNjZWQ0ZGI4YmE2MWQ2ZDlkM2E1NGYyMWUyNTI3M2NmNGZlODQyYjcwYjZmOTQzMCJ9fX0=";
-                String switchTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2NmZjExYjRhN2M2YjRkNzVmYjY1ZjViNTNiMmJiNGNhNjJiOTg5OGMzMTFjZWQ3MThjZjg4NDQzZTU5YTM4OSJ9fX0=";
-                String xboxOneTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmI4NDM2NzM1ZDZiNmI2MzcyNmMzMjU1Y2E0NTVkZjRmNmMzYzc5ODk5ZWJmNzcxOGI4MDRhMWQzN2QwZTc5NiJ9fX0=";
-                String telephoneTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIwNjVkMTUyYTgwYjE1MDZiZWQ5NjAxNDhhOWIzYmM3MGExMzVjZTU0NGNmOGY5OGNhYmNiMzUxZTNhZWFiOSJ9fX0=";
 
                 // Couleur de la vitre
                 ItemStack yellowGlass = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 4);
@@ -132,7 +125,7 @@ public class MenuPrincipalGUI implements Listener {
 
         if(current == null) return;
 
-        if(inv.getName().equalsIgnoreCase("§eMenu Principal")){
+        if(inv.getName().equalsIgnoreCase("§7Menu Principal")){
             e.setCancelled(true);
 
             if(current.getType() == Material.BED){
@@ -146,7 +139,40 @@ public class MenuPrincipalGUI implements Listener {
 
                 if(itemName.equals("§9§lCompatibilité")) {
                     p.closeInventory();
-                    Inventory Compatibilite = Bukkit.createInventory(null, 54, "§es");
+                    Inventory Compatibilite = Bukkit.createInventory(null, 27, "§7Compatibilité");
+
+
+                    // Couleur de la vitre
+                    ItemStack yellowGlass = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 4);
+                    ItemMeta meta = yellowGlass.getItemMeta();
+                    meta.setDisplayName(" ");
+                    yellowGlass.setItemMeta(meta);
+
+                    // Tetes custom
+                    String ps5Texture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE0ZGI3ZGRhZTZmMTMwZjc3NzQzZjlkNzYxYTk0NzYyMTEwNTZkMWIwZTQ3MjdjMDZhMGJlYWU1MjAxNGEyZSJ9fX0=";
+                    String ps4Texture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzRkZWMwM2I5N2VhM2Q4MDNmMzI4YjkwN2UxMjcxZmExMDc3ZWExMTZmODU2ZjNjMzM4NTlkNGM3OTdiODJkYSJ9fX0=";
+                    String xboxTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzk0MjAzMzk2YWIzYzAxMmNjZWQ0ZGI4YmE2MWQ2ZDlkM2E1NGYyMWUyNTI3M2NmNGZlODQyYjcwYjZmOTQzMCJ9fX0=";
+                    String switchTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2NmZjExYjRhN2M2YjRkNzVmYjY1ZjViNTNiMmJiNGNhNjJiOTg5OGMzMTFjZWQ3MThjZjg4NDQzZTU5YTM4OSJ9fX0=";
+                    String xboxOneTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmI4NDM2NzM1ZDZiNmI2MzcyNmMzMjU1Y2E0NTVkZjRmNmMzYzc5ODk5ZWJmNzcxOGI4MDRhMWQzN2QwZTc5NiJ9fX0=";
+                    String telephoneTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIwNjVkMTUyYTgwYjE1MDZiZWQ5NjAxNDhhOWIzYmM3MGExMzVjZTU0NGNmOGY5OGNhYmNiMzUxZTNhZWFiOSJ9fX0=";
+                    String pcTexture = "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2U5OGI1NTY3MWQ0ZWYyZjY0MjU5ZWZlNmFhNjcyOWZlNjVjNzdkYTE5NmMyZDQ1Njg2NjM3NmVjY2NhNjYwYiJ9fX0=";
+
+                    Compatibilite.setItem(0, yellowGlass);
+                    Compatibilite.setItem(1, yellowGlass);
+                    Compatibilite.setItem(7, yellowGlass);
+                    Compatibilite.setItem(8, yellowGlass);
+                    Compatibilite.setItem(11, getCustomHead("§7§lPC", pcTexture, new String[] {}));
+                    Compatibilite.setItem(12, getCustomHead("§9§lPS5", ps5Texture, new String[] {}));
+                    Compatibilite.setItem(13, getCustomHead("§9§lPS4", ps4Texture, new String[] {}));
+                    Compatibilite.setItem(14, getCustomHead("§2§lXbox Series X & S", xboxTexture, new String[] {}));
+                    Compatibilite.setItem(15, getCustomHead("§2§lXbox One", xboxOneTexture, new String[] {}));
+                    Compatibilite.setItem(16, getCustomHead("§c§lNintendo Switch", switchTexture, new String[] {}));
+                    Compatibilite.setItem(17, getCustomHead("§7§lTéléphone", telephoneTexture, new String[] {}));
+                    Compatibilite.setItem(18, yellowGlass);
+                    Compatibilite.setItem(19, yellowGlass);
+                    Compatibilite.setItem(27, yellowGlass);
+                    Compatibilite.setItem(28, yellowGlass);
+                    p.openInventory(Compatibilite);
                 }
             }
         }
