@@ -79,7 +79,7 @@ public class MenuPrincipalGUI implements Listener {
 
     @EventHandler
     public void onInteract(PlayerInteractEvent e){
-        if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_AIR){
+        if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_AIR) {
             ItemStack itm = e.getItem();
             if(itm != null && itm.getType() == Material.COMPASS){
                 Inventory PagePrincipal = Bukkit.createInventory(null, 54, "§7Menu Principal");
@@ -136,6 +136,12 @@ public class MenuPrincipalGUI implements Listener {
             // Gestion des clics sur les têtes personnalisées
             if(current.getType() == Material.SKULL_ITEM) {
                 String itemName = current.getItemMeta().getDisplayName();
+
+                if(itemName.equals("§a§lStatus")) {
+                    p.closeInventory();
+
+                    Inventory Status = Bukkit.createInventory(null, 54, "§7Status");
+                }
 
                 if(itemName.equals("§9§lCompatibilité")) {
                     p.closeInventory();
