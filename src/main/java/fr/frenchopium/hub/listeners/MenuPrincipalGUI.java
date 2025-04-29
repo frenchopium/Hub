@@ -125,6 +125,9 @@ public class MenuPrincipalGUI implements Listener {
 
         if(current == null) return;
 
+        if(inv.getName().equalsIgnoreCase("§7Compatibilité")){
+            e.setCancelled(true);
+
         if(inv.getName().equalsIgnoreCase("§7Menu Principal")){
             e.setCancelled(true);
 
@@ -171,6 +174,7 @@ public class MenuPrincipalGUI implements Listener {
                     Compatibilite.setItem(15, getCustomHead("§c§lNintendo Switch", switchTexture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
                     Compatibilite.setItem(16, getCustomHead("§7§lTéléphone", telephoneTexture, new String[] {"§f» §7Un accès restreint au mini-jeux du serveur", "§f» §7Queue plus lente", "§f» §7Serveur accesible en dernière version du jeu"}));
                     p.openInventory(Compatibilite);
+                    }
                 }
             }
         }
